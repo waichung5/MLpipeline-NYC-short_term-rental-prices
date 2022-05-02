@@ -6,29 +6,34 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Fully qualified name for the artifact
+        type: str
 
       output_artifact:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Name for the W&B artifact that will be created
+        type: str
 
       output_type:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Type of the artifact to create
+        type: str
 
       output_description:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Description for the output artifact
+        type: str
 
       min_price:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Minimum price for dropping outliers
+        type: float
 
       max_price:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Maximum price for dropping outliers
+        type: float
 
 
     command: >-
-        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price} 
+        python run.py  --input_artifact {input_artifact} \
+                        --output_artifact {output_artifact} \
+                        --output_type {output_type} \
+                        --output_description {output_description} \
+                         --min_price {min_price} \
+                         --max_price {max_price}
