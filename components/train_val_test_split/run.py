@@ -31,7 +31,7 @@ def go(args):
         df,
         test_size=args.test_size,
         random_state=args.random_seed,
-        stratify=df[args.stratify_by] if args.stratify_by != 'none' else None,
+        stratify=df[args.stratify_by] if args.stratify_by != 'null' else None,
     )
 
     # Save to output files
@@ -64,7 +64,8 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--stratify_by", type=str, help="Column to use for stratification", default='none', required=False
+        "--stratify_by", type=str, help="Column to use for stratification",
+        default='null', required=False
     )
 
     args = parser.parse_args()
