@@ -17,6 +17,10 @@ logger = logging.getLogger()
 
 
 def go(args):
+    """
+    Run steps to test model
+    """
+
 
     run = wandb.init(job_type="test_model")
     run.config.update(args)
