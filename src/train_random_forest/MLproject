@@ -7,11 +7,11 @@ entry_points:
 
       trainval_artifact:
         description: Train dataset
-        type: string
+        type: str
 
       val_size:
         description: Size of the validation split. Fraction of the dataset, or number of items
-        type: string
+        type: str
 
       random_seed:
         description: Seed for the random number generator. Use this for reproducibility
@@ -26,15 +26,15 @@ entry_points:
       rf_config:
         description: Random forest configuration. A path to a JSON file with the configuration that will
                      be passed to the scikit-learn constructor for RandomForestRegressor.
-        type: string
+        type: str
 
       max_tfidf_features:
         description: Maximum number of words to consider for the TFIDF
-        type: string
+        type: str
 
       output_artifact:
         description: Name for the output artifact
-        type: string
+        type: str
 
     command: >-
       python run.py --trainval_artifact {trainval_artifact} \
