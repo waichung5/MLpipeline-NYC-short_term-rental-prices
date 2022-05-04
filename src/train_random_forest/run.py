@@ -39,6 +39,10 @@ logger = logging.getLogger()
 
 
 def go(args):
+    """
+    Run steps to train random forest model
+    """
+
 
     run = wandb.init(job_type="train_random_forest")
     run.config.update(args)
